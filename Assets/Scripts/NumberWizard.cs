@@ -10,16 +10,25 @@ public class NumberWizard : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
     {
-        min = 1;
-        max = 1000;
-        guess = 500;
+        min = 15;
+        max = 140;
         
-        Debug.Log("I$T DA$$ DEINE ZAHL " + guess + "?");
+        Debug.Log("MOIN$EN WIE GEHT$");
+        
+        Debug.Log("ICH BIN DER NUMBERWIZARD UND ICH WERDE DIR EINEN TRICK ZEIGEN");
+        
+        Debug.Log("DENKE AN EINE ZAHL ZWISCHEN " + min);
+        Debug.Log("UND " + max);
+        
+        Vermutung();
+        
+        Debug.Log("BENUTZE DIE PFEILTASTE NACH OBEN UND UNTEN UM ZU ZEIGEN OB DEINE ZAHL HÖHER ODER NIEDRIGER IST");
+        
+        Debug.Log("WENN ICH DEINE ZAHL ERRATEN HABE DRÜCK ENTER");
     }
         
 	// Update is called once per frame
 	void Update () {
-          
         //lower
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
@@ -36,14 +45,15 @@ public class NumberWizard : MonoBehaviour {
         }
          else if (Input.GetKeyDown(KeyCode.Return))
         {
-        Debug.Log("FOLGT @PANZERBANDE");
+        Debug.Log("ICH HABE GEWONNEN");
         }
 
 	}
     void Vermutung ()
     {
         guess = (min + max) / 2;
-        Debug.Log("I$T DA$$ DEINE ZAHL " + guess + "?");
+        Debug.Log("I$T DEINE ZAHL HÖHER ODER NIEDRIGER ALS " + guess + "?");
         
     }
 }
+
